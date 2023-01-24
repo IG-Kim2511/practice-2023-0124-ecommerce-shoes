@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+    background: gray;
+    }
+
+    #snackbar.show {
+    visibility: visible;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+</style>
+<body>
+    hi
+    <div id="snackbar"></div>
+
+<script>
+
+function showToast(message) {
+    // Get the snackbar DIV
+    var x = document.getElementById("snackbar");
+  
+    // Add the "show" class to DIV
+    x.className = "show";
+  
+    // Update the message text
+    x.innerHTML = message;
+  
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  }
+  
+  showToast("Hello, this is a toast message!");
+
+  </script>
+</body>
+</html>
