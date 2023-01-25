@@ -1,25 +1,32 @@
 
-
+// 🍀코딩용... 자동으로 가장 밑으로 스크롤시키기
+window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" });
 
 
 function addToCart(params) {
     
-    showToast('added to cart');
+    showToast('added to cart','blue');
+    // showToast('added to cart','red');
 }
 
 
-// js110
-function showToast(message) {
-    // Get the snackbar DIV
-    let x = document.getElementById("snackbar");
-  
-    // Add the "show" class to DIV
-    x.className = "show";
-  
-    // Update the message text
-    x.innerHTML = message;
-  
-    // After 3 seconds, remove the show class from DIV
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+// // js110
+
+  // get the buttons
+const toastBox = document.getElementById("toast-box");
+
+
+  // create the toast element
+  const toast = document.createElement("div");
+  toast.classList.add("toast");
+  toastBox.appendChild(toast);
+
+
+
+  function showToast(message,color) {
+    
+    toast.innerHTML = message;
+    toast.style.backgroundColor = color;
+    toast.classList.add("show");
+    setTimeout(function(){ toast.classList.remove("show"); }, 3000);
   }
-  
