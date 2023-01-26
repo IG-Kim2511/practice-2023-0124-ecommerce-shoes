@@ -14,14 +14,14 @@
     outline: none;
     border: none;
     text-decoration: none;
-    transition: all .2s linear;
+    /* transition: all .2s linear; */
 }
 
 html{
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-padding-top: 6rem;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 
 section{
@@ -61,48 +61,76 @@ padding: .8rem 3rem;
 
 /* header section*/
 
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+
+    z-index: 1000;
+    background: whitesmoke;
+}
 
 
+header .logo{
+    font-size: 2.5rem;
+    color: black;
+}
 
+header .navbar a{
+    font-size: 1.7rem;
+    color: black;
+    margin: 0 1rem;
+}
 
+header .navbar a:hover{
+    color: orange;
+}
 
+header .icons a{
+    font-size: 2.5rem;
+    color: black;
+    margin-left: 1.5rem;
+}
 
+header .icons a:hover{
+    color: orange;
+}
 
+header .icons a{
+    font-size: 2.5rem;
+    color: black;
+    margin-left: 1.5rem;
 
+}
 
+header .icons a:hover{
+    color: orange;
+}
 
+#menu-bar{
+    font-size: 2.5rem;
+    padding: .5rem 1.5rem;
+    
+    color: black;
+    border-radius: .3rem;
+    cursor: pointer;
 
+    /* css30 */
+    /* display: none ;  */
+}
 
-
-
-
-
+#menu-bar:hover{
+    background: orange;
+}
 
 
 
 /* js110 toast  */
-
-/* #snackbar{
-    position: absolute;
-    left: -500px;
-    bottom: 0;
-}
-
-#snackbar.show {
-    visibility: visible;
-    min-width: 250px;
-    margin-left: -125px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 2px;
-    padding: 16px;
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    bottom: 30px;
-    font-size: 17px;
-} */
 
 
 .toast {
@@ -146,3 +174,12 @@ to {bottom: 0; opacity: 0;}
 from {bottom: 30px; opacity: 1;}
 to {bottom: 0; opacity: 0;}
 }
+
+
+
+/* home section */
+.home{
+    background: yellow;
+}
+
+/* home section */
