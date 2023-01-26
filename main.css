@@ -340,18 +340,43 @@ to {bottom: 0; opacity: 0;}
 
 /* service section*/
 
+.service .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    background: whitesmoke;
+    border: .1rem solid rgba(0,0,0,0.1);
 
+    border-radius: .5rem;
+    padding: 2rem;
 
+}
+
+.service .box-container .box{ 
+    text-align: center;
+    flex-direction: 1 1 30rem;
+    
+    
+}
+
+.service .box-container .box i{
+
+    font-size: 4rem;
+    color: orange;
+}
 
 
 /* 
    background: yellow;
 
+.service .box-container .box
 
-.home .slide-container .slide
-.home .slide-container .slide
-.home .slide-container .slide
-.home .slide-container .slide
+
+.service .box-container{ }
+.service .box-container{ }
+.service .box-container{ }
+
+
 
  */
 
