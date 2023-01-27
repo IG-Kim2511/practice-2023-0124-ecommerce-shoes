@@ -411,7 +411,7 @@ to {bottom: 0; opacity: 0;}
 }
 
 .products .box-container .box img{
-    /* background: yellow; */
+   
 
     height: 10rem;
     transform: rotate(-35deg);
@@ -459,14 +459,12 @@ to {bottom: 0; opacity: 0;}
 
  .products .box-container .box .content h3{
 
-     background: yellow;
      color: #000;
      font-size: 2.5rem;
  }
 
  .products .box-container .box .content .price{
-     
-     background: yellow;
+
      color: black;
      font-size: 2.5rem;
      font-weight: bolder;
@@ -485,21 +483,64 @@ to {bottom: 0; opacity: 0;}
 
 /* footer */
 
+.footer .box-container {    
+
+    border: 0.1rem solid rgba(0,0,0,0.1);
+    border-radius: .5rem;
+    background: whitesmoke;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+
+.footer .box-container .box{
+
+    flex: 1 1 20rem;
+}
+
+.footer .box-container .box h3{
+
+    font-size: 2.5rem;
+    padding-bottom: 1.5rem;
+    
+
+}
+
+.footer .box-container .box a{
+    
+    display: block;
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+
+}
+
+
+.footer .box-container .box a:hover{
+color: orange;
+    
+}
+
+
+.footer .box-container .credit{
+
+    background: yellow;
+}
+
+/* footer */
+
+
+
+/*🍀🥒js13 CART */
+
+
+
 
 
 /* 
-.products .box-container .box
+.footer .box-container .box
    background: yellow;
 
 
  */
-
-
-
-
-
-
-
-
-
-/* footer */
