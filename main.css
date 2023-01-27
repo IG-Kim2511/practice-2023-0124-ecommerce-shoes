@@ -14,14 +14,14 @@
     outline: none;
     border: none;
     text-decoration: none;
-    /* transition: all .2s linear; */
+    transition: all .2s linear;
 }
 
 html{
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-padding-top: 6rem;
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
 }
 
 section{
@@ -364,24 +364,142 @@ to {bottom: 0; opacity: 0;}
     font-size: 4rem;
     color: orange;
 }
+.service .box-container .box h3{
+
+    font-size: 2rem;
+    color: black;
+    padding-top: 1rem;
+
+}
+
+.service .box-container .box p{ 
+
+    font-size: 1.5rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+
+/* service section*/
+
+/* Latest products section */
+
+.products .box-container{
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;   
+}
+
+.products .box-container .box{
+
+    border: 0.1rem solid rgba(0,0,0,0.1);
+    border-radius: .5rem;
+    text-align: center;
+    
+    
+    position: relative;
+
+    overflow: hidden;
+    background-color: whitesmoke;
+    flex: 1 1 30rem;
+      
+}
+
+.products .box-container .box .content{
+    padding: 1.5rem;
+}
+
+.products .box-container .box img{
+    /* background: yellow; */
+
+    height: 10rem;
+    transform: rotate(-35deg);
+    filter: drop-shadow(0 0.5rem 1rem);
+
+    margin: 8rem 2rem;
+
+}
+
+.products .box-container .box:hover img{
+ 
+    transform: rotate(0deg) scale(1.2);
+}
+
+.products .box-container .box .icons{
+    
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    top: .5rem; left: -10rem;
+}
+.products .box-container .box:hover .icons{
+    left: 1rem;
+
+}
+
+.products .box-container .box .icons button{   
+
+    height: 4.5rem;
+    width: 5rem;
+    line-height: 4.5rem;
+    font-size: 2rem;
+    color: black;
+    border: .1rem solid black;
+    border-radius: .5rem;
+    background-color: white;
+    margin-top: .5rem;
+}
+
+.products .box-container .box .icons button:hover{  
+    background: orange;
+    color: whitesmoke;
+ }
+
+
+ .products .box-container .box .content h3{
+
+     background: yellow;
+     color: #000;
+     font-size: 2.5rem;
+ }
+
+ .products .box-container .box .content .price{
+     
+     background: yellow;
+     color: black;
+     font-size: 2.5rem;
+     font-weight: bolder;
+     padding: 1rem 0;
+}
+
+.products .box-container .box .content .price span{
+    color: orange;
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+
+
+
+/* Latest products section */
+
+/* footer */
+
 
 
 /* 
+.products .box-container .box
    background: yellow;
-
-.service .box-container .box
-
-
-.service .box-container{ }
-.service .box-container{ }
-.service .box-container{ }
-
 
 
  */
 
 
-/* service section*/
 
 
 
+
+
+
+
+/* footer */
