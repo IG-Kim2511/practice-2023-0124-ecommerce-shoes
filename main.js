@@ -267,13 +267,43 @@ function renderSubtotal(params) {
   let totalItems=0;
 
   cart.forEach((item)=>{
+    totalPrice += item.price *item.numberOfUnit
+    totalItems += item.numberOfUnit;
     
+    subtotalEl.innerHTML = `${totalItems} : $`
   });
   
 }
 
 
+// js 41. remove item from cart
+function removeItemFromCart(params) {
+  cart = cart.filter(pp_item => pp_item.id !== params);
 
+  updateCart();
+  
+}
+
+
+
+// localstorage.clear(); / location.reload();
+
+
+const deleteAllBtn = document.querySelector('.delete-all-btn');
+const checkoutBtn = document.querySelector('.checkoutBtn');
+
+
+deleteAllBtn.addEventListener('click',()=>{
+  localStorage.clear();
+  location.reload();
+});
+
+
+checkoutBtn.addEventListener('click',()=>{
+  localStorage.clear();
+  location.reload();
+  alert('thankyou');
+});
 
 // 🍀 js110 toast-
 
