@@ -195,16 +195,82 @@ function addToCart(p_id) {
 
 
 
-function changeNumberOfUnits() {
+function changeNumberOfUnits(action,id) {
+  cart = cart.map((item)=>{
+    let numberOfUnit = item.numberOfUnit;
+
+    if (item.id ===id) {
+      if (action ==='minus'&& numberOfUnit >1 ) {
+        numberOfUnit --;
+        
+      } else if (action === 'plus' && numberOfUnit < item.instock) {
+        
+        numberOfUnit++;
+      } else if (action === 'plus') {
+        
+      }
+      
+    }
+
+    return{
+      ...item,
+      numberOfUnit:numberOfUnit,
+    }
+
+  });
   
 }
 
+// js13. update cart
+// localStorage
 function updateCart(params) {
+  renderCartItems();
+  renderSubtotal();
+  
+  localStorage.setItem('CART',JSON.stringify(cart));
+}
+updateCart();
+
+
+function renderCartItems(params) {
+
+  cartItemsEl.innerHTML=""; 
+
+  cart.forEach(pp_item =>{
+    console.log(pp)
+    cartItemsEl.innerHTML += `
+    <div class="cart-item">
+    <div class="item-info" onclick="removeItemFromCart(${pp_item.id})">
+        <img src="${pp_item.imgSrc}" alt="${pp_item.name}">
+        <h4>${pp_item.name}</h4>
+    </div>
+    <div class="unit-price">
+        <small>$</small>${pp_item.price}
+        <img src="./images/icons8-delete-128.png" alt="" class="delete"  onclick="removeItemFromCart(${pp_item.id})">
+    </div>
+    <div class="units">
+        <div class="mybtn plus" onclick="changeNumberOfUnits('plus', ${pp_item.id})"><i class="fa-solid fa-plus"></i></div>           
+        <div class="number">${pp_item.numberOfUnits}</div>
+        <div class="mybtn minus" onclick="changeNumberOfUnits('minus', ${pp_item.id})"><i class="fa-solid fa-minus"></i></div>
+    </div>
+</div>
+`
+
+  });
+}
+  
+
+// js35 calculate, render subtotal
+
+function renderSubtotal(params) {
+  let totalPrice=0;
+  let totalItems=0;
+
+  cart.forEach((item)=>{
+    
+  });
   
 }
-
-
-
 
 
 
